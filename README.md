@@ -25,5 +25,19 @@ To set up this project locally, follow these steps:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/my-tasks-app.git
-cd my-tasks-app
+git clone git@github.com:Bkroland19/todo-app.git
+cd todo-app
+
+### To startup the mockapi server run this can be accessed on http://localhost:5000/tasks
+npm run mock-api
+
+### Run Frontend ,this can be accessed on http://localhost:5173/
+npm install
+npm run dev
+
+### Run tests
+npm run test
+
+
+
+
