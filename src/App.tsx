@@ -4,6 +4,8 @@ import { useModal } from "./hooks/useModal";
 import { Button, Modal, Navbar, TaskForm, TaskItem } from "./components";
 import { IoMdClose } from "react-icons/io";
 import { FaCheckCircle, FaCircle } from "react-icons/fa";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App: React.FC = () => {
 	const { tasks, addTask, removeTask, updateTask, toggleCompletion } =
@@ -50,8 +52,10 @@ const App: React.FC = () => {
 	const handleFormSubmit = (title: string, description: string) => {
 		if (editingTask) {
 			updateTask(editingTask.id, title, description);
+			toast.success("Task updated successfully!");
 		} else {
 			addTask(title, description);
+			toast.success("Task added successfully!");
 		}
 		setEditingTask(null);
 		closeModal();
@@ -59,6 +63,12 @@ const App: React.FC = () => {
 
 	const handleToggleCompletion = (id: string) => {
 		toggleCompletion(id);
+		toast.info("Task completion status updated!");
+	};
+
+	const handleRemove = (id: string) => {
+		removeTask(id);
+		toast.error("Task removed!");
 	};
 
 	const handlePageChange = (page: number) => {
@@ -131,7 +141,9 @@ const App: React.FC = () => {
 										<TaskItem
 											task={task}
 											onDelete={() =>
-												removeTask(task.id)
+												handleRemove(
+													task.id
+												)
 											}
 											onEdit={() =>
 												handleEdit(task)
@@ -188,6 +200,7 @@ const App: React.FC = () => {
 						/>
 					</div>
 				</Modal>
+				<ToastContainer />
 			</div>
 		</div>
 	);
