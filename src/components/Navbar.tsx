@@ -21,7 +21,7 @@ const Navbar = ({ onClick }) => {
 						/>
 					</svg>
 
-					<h1 className="text-lg font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 ">
+					<h1 className="text-lg hidden md:flex font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 ">
 						My Tasks App
 					</h1>
 				</div>

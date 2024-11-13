@@ -25,7 +25,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({
     >
       <div className="flex-1">
         <h3
-          className="text-lg font-semibold text-gray-800"
+          className="text-sm md:text-lg font-semibold text-gray-800"
           data-testid="task-title"
         >
           {task.title}
@@ -33,7 +33,7 @@ export const TaskItem: React.FC<TaskItemProps> = ({
 
         <button
           onClick={toggleDescription}
-          className="text-blue-500 text-sm hover:text-blue-700 mt-1"
+          className="text-blue-500 text-xs md:text-sm hover:text-blue-700 mt-1"
           data-testid="toggle-description-button"
         >
           {isExpanded ? "Hide Details" : "View Details"}

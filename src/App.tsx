@@ -75,7 +75,7 @@ const App: React.FC = () => {
 			<Navbar onClick={openModal} />
 			<div className="min-h-screen bg-gradient-to-br from-gray-100 to-indigo-200 p-6 flex flex-col items-center">
 				<div className="mt-8 w-full max-w-lg space-y-4">
-					<div className="flex justify-center space-x-4 mb-4">
+					<div className="flex space-x-1 justify-center md:space-x-4 mb-4">
 						<Button onClick={() => handleFilterChange("all")}>
 							All
 						</Button>
@@ -142,7 +142,7 @@ const App: React.FC = () => {
 							</div>
 						))
 					) : (
-						<p className="text-gray-600 text-center text-lg">
+						<p className="text-gray-600 text-center text-sm md:text-lg">
 							No tasks added yet!
 						</p>
 					)}
@@ -156,7 +156,7 @@ const App: React.FC = () => {
 						>
 							Previous
 						</Button>
-						<span className="text-lg font-medium">
+						<span className="text-xs md:text-sm font-medium">
 							Page {currentPage} of {totalPages}
 						</span>
 						<Button
