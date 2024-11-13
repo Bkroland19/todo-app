@@ -1,8 +1,29 @@
-# React + Vite
+# My Tasks App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+**My Tasks App** is a task management application that allows users to create, edit, delete, and mark tasks as completed. The app leverages modern React features, including hooks and context, to manage state and ensure a seamless user experience. The app is designed to be highly extensible, allowing easy integration of new features such as advanced filtering, search, and user authentication.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The primary goal of the app is to help users efficiently manage their daily tasks and track their progress. It provides a simple and intuitive user interface with functionality for task creation, modification, and completion tracking.
+
+---
+
+## Table of Contents
+
+- [Project Setup](#project-setup)
+- [App Purpose](#app-purpose)
+- [App Structure](#app-structure)
+- [Design Decisions](#design-decisions)
+- [Running Tests](#running-tests)
+
+---
+
+## Project Setup
+
+To set up this project locally, follow these steps:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/my-tasks-app.git
+cd my-tasks-app
