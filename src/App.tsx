@@ -77,7 +77,7 @@ const App: React.FC = () => {
 				<div className="mt-8 w-full max-w-lg space-y-4">
 					<div className="flex space-x-1 justify-center md:space-x-4 mb-4">
 						<Button onClick={() => handleFilterChange("all")}>
-							All
+							All({tasks.length})
 						</Button>
 						<Button
 							onClick={() =>
